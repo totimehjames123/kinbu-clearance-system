@@ -37,12 +37,12 @@ app.use(cors());
 
 //use routes import
 // (User)
-app.post('/create-user', createUser)
+app.post('/create-user', createUser)  
 app.post('/login', login)
 app.post('/verify-user', verifyUser)
 app.post('/change-password', changePassword)
 app.post('/forgot-password', forgotPassword)
-app.post('/reset-password', resetPassword)
+app.post('/reset-password', resetPassword) 
 app.get('/all-users', allUsers)
 app.put('/update-user/:id', updateUser)
 app.delete('/delete-user/:id', deleteUser)
