@@ -41,7 +41,7 @@ app.use(cors({
     allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
-//use routes import
+//use route import
 // (User)
 app.post('/create-user', createUser)  
 app.post('/login', login)
