@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import './index.css';  // Ensure this file contains necessary styles
 import './App.css';    // Ensure this file contains necessary styles
-// import checkIsLoggedInAndNavigate from './utils/checkIsLoggedInAndNavigate';
+import checkIsLoggedInAndNavigate from '../utils/checkIsLoggedInAndNavigate';
 import Logo from './components/Logo'; // Ensure this path is correct
 
 function App() {
-  // checkIsLoggedInAndNavigate("/all-events", null);
+  checkIsLoggedInAndNavigate("/login", null);
 
   return (
     <div className="relative h-screen">
