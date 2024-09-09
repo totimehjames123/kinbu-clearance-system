@@ -46,7 +46,7 @@ app.use(cors({
 app.post('/create-user', createUser)  
 app.post('/login', login)
 app.post('/verify-user', verifyUser)
-app.post('/change-password', changePassword)
+app.post('/change-password', changePassword) 
 app.post('/forgot-password', forgotPassword)
 app.post('/reset-password', resetPassword) 
 app.get('/all-users', allUsers)
