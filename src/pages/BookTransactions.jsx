@@ -148,7 +148,7 @@ const BookTransactions = () => {
             // Extract start years
             const startYears = Array.from(new Set(allStudents.map(transaction => transaction.studentId.startYear)))
                 .filter(year => year); // Remove any undefined or null values
-            console.log(startYears)
+            console.log("startyear" + startYears.length)
             // Update filters state with extracted start years
             setFilters(prevFilters =>
                 prevFilters.map(filter =>
@@ -208,9 +208,9 @@ const BookTransactions = () => {
         }
     
         // Apply start year filter
-        const startYearFilter = filters.find(f => f.id === 'startYear');
+        const startYearFilter = filters.filter(f => f.id === 'startYear');
         if (startYearFilter?.value) {
-            filtered = filtered.filter(transaction => transaction.startYear === startYearFilter.value.value);
+            filtered = filtered.filter(transaction => transaction?.studentId.startYear === startYearFilter.value.value);
         }
     
         console.log('Filtered Transactions:', filtered);
