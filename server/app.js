@@ -35,6 +35,12 @@ app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
+app.use(cors({
+    origin: 'https://kinbu-clearance-system.vercel.app',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+}));
+
 //use routes import
 // (User)
 app.post('/create-user', createUser)  
