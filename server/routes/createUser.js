@@ -29,7 +29,7 @@ const createUser = async (req, res) => {
         // Check if the user already exists
         const existingUser = await User.findOne({ email });
         if (existingUser) {
-            return res.status(400).json({ error: 'Email already exists' });
+            return res.status(400).json({ error: 'Email already exists!' });
         }
 
         // Check if the department already exists (only for 'hod' role)
