@@ -320,10 +320,10 @@ const BookTransactions = () => {
                     />
                     <div className="flex flex-col lg:flex-row gap-2 items-center">
                         <FilterComponent filters={filters} onChange={handleFilterChange} />
-                        {getUserRole() === "admin" && <button
+                        {(getUserRole() === "librarian" || getUserRole() === "bookshop") && <button
                             onClick={() => setAddModalOpen(true)}
                             className='flex items-center gap-x-1 bg-violet-500 text-white rounded-md p-2 text-sm'>
-                            <FaPlus /> <span>New transaction</span>
+                            <FaPlus /> <span>New transaction</span> 
                         </button>}
                     </div>
                 </div>
