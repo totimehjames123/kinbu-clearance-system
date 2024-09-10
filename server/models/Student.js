@@ -14,7 +14,7 @@ const studentSchema = new Schema({
     },
     WASSCEIndexNumber: {
         type: String,
-        unique: true, // Ensure uniqueness, but not required initially
+        // unique: true, // Ensure uniqueness, but not required initially
         default: null, // Use null as a placeholder for absence
     },
     gender: {
