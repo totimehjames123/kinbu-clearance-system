@@ -208,7 +208,7 @@ const BookTransactions = () => {
         }
     
         // Apply start year filter
-        const startYearFilter = filters.filter(f => f.id === 'startYear');
+        const startYearFilter = filters.find(f => f.id === 'startYear');
         if (startYearFilter?.value) {
             filtered = filtered.filter(transaction => transaction?.studentId.startYear === startYearFilter.value.value);
         }
@@ -320,11 +320,11 @@ const BookTransactions = () => {
                     />
                     <div className="flex flex-col lg:flex-row gap-2 items-center">
                         <FilterComponent filters={filters} onChange={handleFilterChange} />
-                        {(getUserRole() === "librarian" || getUserRole() === "bookshop") && <button
+                        {/* {(getUserRole() === "librarian" || getUserRole() === "bookshop") && <button
                             onClick={() => setAddModalOpen(true)}
                             className='flex items-center gap-x-1 bg-violet-500 text-white rounded-md p-2 text-sm'>
                             <FaPlus /> <span>New transaction</span> 
-                        </button>}
+                        </button>} */}
                     </div>
                 </div>
                 <div className='flex gap-2 px-5 justify-between items-center'>

@@ -293,7 +293,7 @@ const BookManagement = () => {
                                         {getUserRole() === "bookshop" && <td className={`px-6 py-4  whitespace-nowrap ${getBookshopStatusClassName(student.bookshopStatus)}`}>{student.bookshopStatus}</td>}
                                         {(getUserRole() === "bookshop" || getUserRole() === "librarian") && <td className='px-6 py-4 gap-x-4 flex justify-around items-center'>
                                             <button
-                                                className={`${student.status == "graduated" || student.status == "suspended" ? "bg-gray-300 text-white border-0 cursor-not-allowed" : "text-black hover:bg-black hover:text-white border-black hover:border-0  rounded-lg"} p-2 rounded-md`}
+                                                className={`${student.status == "graduated" || student.status == "suspended" ? "bg-gray-300 text-white border-0 cursor-not-allowed" : "bg-black hover:bg-black hover:text-white text-white hover:border-0  rounded-lg"} p-2 whitespace-nowrap rounded-md`}
                                                 onClick={() => {
                                                     setSelectedStudent(student);
                                                     setDetailsModalOpen(true);
