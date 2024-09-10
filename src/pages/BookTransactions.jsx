@@ -207,11 +207,11 @@ const BookTransactions = () => {
             filtered = filtered.filter(transaction => transaction.origin === originFilter.value.value);
         }
     
-        // Apply start year filter
-        const startYearFilter = filters.find(f => f.id === 'startYear');
-        if (startYearFilter?.value) {
-            filtered = filtered.filter(transaction => transaction?.studentId.startYear === startYearFilter.value.value);
-        }
+        // // Apply start year filter
+        // const startYearFilter = filters.find(f => f.id === 'startYear');
+        // if (startYearFilter?.value) {
+        //     filtered = filtered.filter(transaction => transaction?.studentId.startYear === startYearFilter.value.value);
+        // }
     
         console.log('Filtered Transactions:', filtered);
     
