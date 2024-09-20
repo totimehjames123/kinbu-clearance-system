@@ -18,6 +18,7 @@ import getUserDepartment from '../../utils/getUserDepartment';
 import { departmentOptions } from '../../utils/constants';
 import FilterComponent from '../components/FilterComponent';
 import checkIsLoggedInAndNavigate from '../../utils/checkIsLoggedInAndNavigate';
+import ClearanceForm from '../components/ClearanceForm';
 
 const Dashboard = () => {
     const [students, setStudents] = useState([]);
@@ -383,13 +384,9 @@ const Dashboard = () => {
                                                     >
                                                         Cancel
                                                     </button>}
-                                                    <MdDownload
-                                                        title='Click to download clearance form!'
-                                                        className='w-10 h-10 bg-gray-100 text-blue-500 hover:text-blue-300 transition-all duration-500 rounded-full p-2 '
-                                                        onClick={() => {
-                                                        
-                                                        }}
-                                                    />
+                                                    <ClearanceForm student={student} />
+
+                                                    
                                                     </>}
                                                 {getUserRole() === "hod" && <>
                                                     {student.HODApprovedStatus === false ? <button

@@ -17,9 +17,9 @@ const studentSchema = new Schema({
         // unique: true, // Ensure uniqueness, but not required initially
         default: null, // Use null as a placeholder for absence
     },
-    gender: {
+    gender: { 
         type: String,
-        required: true,
+        required: true,  
     },
     programme: {
         type: String,

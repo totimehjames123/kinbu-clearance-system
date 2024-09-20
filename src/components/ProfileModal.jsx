@@ -18,7 +18,7 @@ function ProfileModal({ closeModal }) {
   }
 
   // Get the current user data from localStorage
-  const { studentId, name, level, department, email, role, phoneNumber } = JSON?.parse(localStorage?.getItem('currentUser'));
+  const { fullName, username, level, department, email, role, phoneNumber } = JSON?.parse(localStorage?.getItem('currentUser'));
 
   return (
     <div className="fixed inset-0 z-10 flex items-center justify-center overflow-x-hidden overflow-y-auto bg-black bg-opacity-60">
@@ -51,8 +51,8 @@ function ProfileModal({ closeModal }) {
             className="mx-auto rounded-full w-24 h-24"
             alt="user"
           />
-          <h3 className="text-xl font-bold mt-4">{name}</h3>
-          <p className="text-gray-600 text-xs mb-3">@{studentId}</p>
+          <h3 className="text-xl font-bold mt-4">{fullName}</h3>
+          <p className="text-gray-600 text-xs mb-3">@{username}</p>
           <p className="text-gray-600 text-sm mb-5 px-8"> 
             {role} · {level} · {department} · {email} · {phoneNumber}
           </p>
